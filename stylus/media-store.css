@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+}
+html a {
+  text-decoration: none;
+  color: inherit;
+}
+html,
+body {
+  cursor: default;
+}
+code {
+  cursor: text;
+}

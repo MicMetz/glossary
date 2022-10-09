@@ -1,0 +1,121 @@
+h1 {
+  font-size:  2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+
+.git-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+}
+
+.icon-link > .bi {
+    margin-top: .125rem;
+    margin-left: .125rem;
+    fill: currentcolor;
+    transition: transform .25s ease-in-out;
+}
+.icon-link:hover > .bi {
+    transform: translate(.25rem);
+}
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+}
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.project-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#projects-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /* background-image: url(../img/cover.jpg); */
+}
+
+#projects-wrapper h1, #projects-wrapper h2, #projects-wrapper h3, #projects-wrapper h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+
+#custom-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+#custom-cards .card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: .75rem;
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
+    transition: box-shadow .25s ease-in-out;
+}
+
+#custom-cards .card .image-overlay {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-top-left-radius: .75rem;
+    border-top-right-radius: .75rem;
+}
+
+#custom-cards .card:hover {
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
+}
+
+#custom-cards .card .card-body {
+    padding: 1.5rem;
+}
+
+#custom-cards .card .card-body .card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#custom-cards .card .card-body .card-text {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#custom-cards .card .card-body .card-link {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#custom-cards .card .card-body .card-link:hover {
+    text-decoration: none;
+}
+
+#custom-cards .card .card-body .card-link:hover .bi {
+    transform: translate(.25rem);
+}

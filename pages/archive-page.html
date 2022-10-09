@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!--BOOTSTRAP CSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!--BOOTSTRAP CSS-->
+		
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../stylus/archive-store.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
+		<!-- <link rel="stylesheet" href="../css/archive.css"> -->
+		<title></title>
+	
+	</head>
+	<nav class="navbar navbar-expand-lg bg-dark fixed-top" id="navigation">
+		<div class="container-fluid">
+			<a class="navbar-brand text-light home-route" href="../index.html" style="color: white!important;">App</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link active" aria-current="page" href="../index.html" data-page="index">Home</a>
+					<a class="nav-link" href="project-page.html" data-page="project-page">Projects</a>
+					<a class="nav-link" href="archive-page.html" data-page="archive-page">Archive</a>
+					<a class="nav-link" href="about-page.html" data-page="about-page">About</a>
+					<a class="nav-link" href="contact-page.html" data-page="contact-page">Contact</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<body >
+		<section class='list-view'>
+			
+			<main class='archives'>
+				<ul class='archive-list' id='archive-placeholder'>
+					<li class='archive-item'>
+						<div class='archive-item__image'>
+							<img src='https://images.unsplash.com/photo-1517436073-3b1b1b1b1b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' alt=''>
+						</div>
+						<div class='archive-item__content'>
+							<h2 class='archive-item__title'>Title</h2>
+							<p class='archive-item__description'>Description</p>
+							<a href='#' class='archive-item__link'>Link</a>
+						</div>
+					</li>
+				</ul>
+			</main>
+			
+			<footer>
+				<button>load more?</button>
+			</footer>
+		
+		</section>
+		
+		
+		
+		<script id='archive-template' type='text/template'>
+			{{#each archive}}
+			
+			<li class='archive {{status.type}}'>
+				
+				<section class='promotional-media'>
+					<a href='{{link}}' class='poster-link'>
+						<figure class='poster'>
+							<img src='' alt=''
+							     data-small='{{poster.small}}'
+							     data-medium='{{poster.medium}}'
+							     data-large='{{poster.large}}'
+							/>
+						</figure>
+					</a>
+				</section>
+				
+				<section class='details'>
+					
+					
+					{{#if topline}}
+					<div class='topline-info'>
+						<h2>
+							<span>{{topline}}</span>
+						</h2>
+					</div>
+					{{/if}}
+					
+					{{#if title}}
+					<div class='title'>
+						<h1 class='copy'>
+							<span>{{title}}</span>
+						</h1>
+					</div>
+					{{/if}}
+					
+					<div class='acts'>
+						
+						{{#if headliners}}
+						<ol class='act-list headliner-list'>
+							{{#headliners}}
+							<li class='act headliner'>
+								<a class='link' href='{{link}}' target='{{name}}'>
+									<h1 class='name'>
+										<span>{{name}}</span>
+									</h1>
+								</a>
+							</li>
+							{{/headliners}}
+						</ol>
+						{{/if}}
+					</div>
+						
+						<div class='dates'>
+							<h2 class='date'>
+								<span>{{date}}</span>
+							</h2>
+						</div>
+				</section>
+				
+				
+				<section class='call-to-action'>
+					
+					<div class='more-info'>
+						<a href='/archive-link' class='link'>
+							<span>More info</span>
+						</a>
+					</div>
+				</section>
+			
+			</li>
+			
+			{{/each}}
+		</script>
+		
+		<footer class="fixed-bottom small">
+				<p class="text-center mb-0">
+					&copy; 2022
+				</p>
+				<p class="text-center small">
+					<i class="fa fa-github">
+						<a href="github.com/MicMetz/">Github</a>
+					</i>
+				</p>
+			</footer>
+		
+		<script type="application/javascript" src="../manager.js"></script>
+		<script type="module" src="../storage.js"></script>
+	</body>
+</html>
