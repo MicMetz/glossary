@@ -17,133 +17,133 @@
 		<title></title>
 	
 	</head>
-	<nav class="navbar navbar-expand-lg bg-dark fixed-top" id="navigation">
-		<div class="container-fluid">
-			<a class="navbar-brand text-light home-route" href="../index.html" style="color: white!important;">App</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav">
-					<a class="nav-link active" aria-current="page" href="../index.html" data-page="index">Home</a>
-					<a class="nav-link" href="project-page.html" data-page="project-page">Projects</a>
-					<a class="nav-link" href="archive-page.html" data-page="archive-page">Archive</a>
-					<a class="nav-link" href="about-page.html" data-page="about-page">About</a>
-					<a class="nav-link" href="contact-page.html" data-page="contact-page">Contact</a>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg bg-dark fixed-top" id="navigation">
+			<div class="container-fluid">
+				<a class="navbar-brand text-light home-route" href="../index.html" style="color: white!important;">App</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link active" aria-current="page" href="../index.html" data-page="index">Home</a>
+						<a class="nav-link" href="project-page.html" data-page="project-page">Projects</a>
+						<a class="nav-link" href="archive-page.html" data-page="archive-page">Archive</a>
+						<a class="nav-link" href="about-page.html" data-page="about-page">About</a>
+						<a class="nav-link" href="contact-page.html" data-page="contact-page">Contact</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</nav>
-	<body >
-		<section class='list-view'>
-			<main class='archives'>
-				<ul class='archive-list' id='archive-placeholder'>
-					<li class='archive-item'>
-						<div class='archive-item__image'>
-							<img src='https://images.unsplash.com/photo-1517436073-3b1b1b1b1b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80' alt=''>
-						</div>
-						<div class='archive-item__content'>
-							<h2 class='archive-item__title'>Title</h2>
-							<p class='archive-item__description'>Description</p>
-							<a href='#' class='archive-item__link'>Link</a>
-						</div>
-					</li>
-				</ul>
-			</main>
-			
-			<footer>
-				<button>continue</button>
-			</footer>
-		
-		</section>
-		
-		
-		
-		<script id='archive-template' type='text/template'>
-			{{#each archive}}
-			
-			<li class='archive {{status.type}}'>
+		</nav>
+		<div class="container-fluid pt-5">
+			<section class="list-view">
+				<main class="archives">
+					<ul class="archive-list" id="archive-placeholder">
+						<li class="archive-item">
+							<div class="archive-item__image">
+								<img src="https://images.unsplash.com/photo-1517436073-3b1b1b1b1b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" alt="">
+							</div>
+							<div class="archive-item__content">
+								<h2 class="archive-item__title">Title</h2>
+								<p class="archive-item__description">Description</p>
+								<a href="#" class="archive-item__link">Link</a>
+							</div>
+						</li>
+					</ul>
+				</main>
 				
-				<section class='pre-media'>
-					<a href='{{link}}' class='poster-link'>
-						<figure class='poster'>
-							<img src='' alt=''
-							     data-small='{{poster.small}}'
-							     data-medium='{{poster.medium}}'
-							     data-large='{{poster.large}}'
-							/>
-						</figure>
-					</a>
-				</section>
+				<footer>
+					<button>continue</button>
+				</footer>
+			
+			</section>
+			
+			
+			<script id="archive-template" type="text/template">
+				{{#each archive}}
 				
-				<section class='details'>
+				<li class="archive {{status.type}}">
 					
+					<section class="pre-media">
+						<a href="{{link}}" class="poster-link">
+							<figure class="poster">
+								<img src="" alt="" data-small="{{poster.small}}" data-medium="{{poster.medium}}" data-large="{{poster.large}}"
+								/>
+							</figure>
+						</a>
+					</section>
 					
-					{{#if topline}}
-					<div class='topline-info'>
-						<h2>
-							<span>{{topline}}</span>
-						</h2>
-					</div>
-					{{/if}}
-					
-					{{#if title}}
-					<div class='title'>
-						<h1 class='copy'>
-							<span>{{title}}</span>
-						</h1>
-					</div>
-					{{/if}}
-					
-					<div class='preview'>
+					<section class="details">
 						
-						{{#if headline}}
-						<ol class='act-list headliner-list'>
-							{{#headline}}
-							<li class='act headliner'>
-								<a class='link' href='{{link}}' target='{{name}}'>
-									<h1 class='name'>
-										<span>{{name}}</span>
-									</h1>
-								</a>
-							</li>
-							{{/headline}}
-						</ol>
+						
+						{{#if topline}}
+						<div class="topline-info">
+							<h2>
+								<span>{{topline}}</span>
+							</h2>
+						</div>
 						{{/if}}
-					</div>
 						
-						<div class='creationdate'>
-							<h2 class='date'>
+						{{#if title}}
+						<div class="title">
+							<h1 class="copy">
+								<span>{{title}}</span>
+							</h1>
+						</div>
+						{{/if}}
+						
+						<div class="preview">
+							
+							{{#if headline}}
+							<ol class="act-list headliner-list">
+								{{#headline}}
+								<li class="act headliner">
+									<a class="link" href="{{link}}" target="{{name}}">
+										<h1 class="name">
+											<span>{{name}}</span>
+										</h1>
+									</a>
+								</li>
+								{{/headline}}
+							</ol>
+							{{/if}}
+						</div>
+						
+						<div class="creationdate">
+							<h2 class="date">
 								<span>{{date}}</span>
 							</h2>
 						</div>
-				</section>
-				
-				
-				<section class='call-to-action'>
+					</section>
 					
-					<div class='more-info'>
-						<a href='/archive-link' class='link'>
-							<span>More info</span>
-						</a>
-					</div>
-				</section>
-			
-			</li>
-			
-			{{/each}}
-		</script>
+					
+					<section class="call-to-action">
+						
+						<div class="more-info">
+							<a href="/archive-link" class="link">
+								<span>More info</span>
+							</a>
+						</div>
+					</section>
+				
+				</li>
+				
+				{{/each}}
+			</script>
+		</div>
+		
 		
 		<footer class="small">
-				<p class="text-center mb-0">
-					&copy; 2022
-				</p>
-				<p class="text-center small">
-					<i class="fa fa-github">
-						<a href="github.com/MicMetz/">Github</a>
-					</i>
-				</p>
-			</footer>
+			<p class="text-center mb-0">
+				&copy; 2022
+			</p>
+			<p class="text-center small">
+				<i class="fa fa-github">
+					<a href="github.com/MicMetz/">Github</a>
+				</i>
+			</p>
+		</footer>
 		
 		<script type="application/javascript" src="../manager.js"></script>
 		<script type="module" src="../storage.js"></script>

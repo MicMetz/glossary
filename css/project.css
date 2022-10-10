@@ -43,11 +43,9 @@ h3 {
     background-size: cover;
 }
 
-#projects-wrapper {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    /* background-image: url(../img/cover.jpg); */
+.global-wrapper {
+
+    padding-top: 100px !important;
 }
 
 #projects-wrapper h1, #projects-wrapper h2, #projects-wrapper h3, #projects-wrapper h4 {
