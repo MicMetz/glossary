@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+}
+html a {
+  text-decoration: none;
+  color: inherit;
+}
+html body {
+  font-size: 16px;
+  color: #000;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html,
+body {
+  cursor: normal;
+}
+code {
+  cursor: text;
+}
