@@ -43,12 +43,9 @@ h3 {
     background-size: cover;
 }
 
-.global-wrapper {
 
-    padding-top: 100px !important;
-}
 
-#projects-wrapper h1, #projects-wrapper h2, #projects-wrapper h3, #projects-wrapper h4 {
+.global-wrapper h1, .global-wrapper h2, .global-wrapper h3, .global-wrapper h4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1rem;

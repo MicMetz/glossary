@@ -67,6 +67,12 @@ button.control-option:disabled {
 
 
 
+.global-wrapper {
+    padding-top : 100px !important;
+}
+
+
+
 .overlay {
     display   : flex;
     position  : fixed;
@@ -195,31 +201,38 @@ button.control-option:disabled {
 }
 
 
+
 .hidden {
     display : none;
 }
+
+
 
 .shown {
     display : block;
 }
 
 
-a.nav-link  {
+
+a.nav-link {
     color : white;
 }
+
 
 
 a.nav-link:hover {
     color : #a06f6f;
 }
 
+
+
 footer {
-    position : sticky;
-    width    : 100%;
-    height   : 100%;
-    color            : black;
-    text-align       : center;
-    padding-top      : 50px;
+    position    : sticky;
+    width       : 100%;
+    height      : 100%;
+    color       : black;
+    text-align  : center;
+    padding-top : 50px;
 }
 
 
