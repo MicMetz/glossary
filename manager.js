@@ -3,6 +3,7 @@ const navbar = document.getElementById("navigation");
 const frame = document.getElementById("o-frame");
 frame.onload = function () {
     postMessage('{method:"setVolume",value:0}', '*');
+    console.log("iFrame (Oceans): Volume set to 0");
 }
 
 $(document).ready(function () {
