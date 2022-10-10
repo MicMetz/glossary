@@ -1,6 +1,9 @@
 const page = ["/index.html", "/about-page.html", "/contact-page.html", "/blog-page.html", "/project-page.html", "archive-page.html", "/404-page.html", "/media-page.html"];
 const navbar = document.getElementById("navigation");
-
+const frame = document.getElementById("o-frame");
+frame.onload = function () {
+    postMessage('{method:"setVolume",value:0}', '*');
+}
 
 $(document).ready(function () {
     updateNavbar();
