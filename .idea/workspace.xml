@@ -109,7 +109,7 @@
       <recent name="C:\Users\blahh\Documents\SchoolWork\Web\MicMetz.github.io\project\src\data\Experience" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.project-page.html">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../../Program Files/AdoptOpenJDK/jdk-11.0.9.101-hotspot" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -121,8 +121,12 @@
     <configuration name="archive-page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/glossary/pages/archive-page.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="project-page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/glossary/pages/project-page.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.project-page.html" />
         <item itemvalue="JavaScript Debug.archive-page.html" />
       </list>
     </recent_temporary>
@@ -192,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665367153988</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="mute iframes">
+      <created>1665367305256</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665367305256</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

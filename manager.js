@@ -1,15 +1,21 @@
 const page = ["/index.html", "/about-page.html", "/contact-page.html", "/blog-page.html", "/project-page.html", "archive-page.html", "/404-page.html", "/media-page.html"];
 const navbar = document.getElementById("navigation");
 const frame = document.getElementById("o-frame");
-frame.onload = function () {
-    postMessage('{method:"setVolume",value:0}', '*');
-    console.log("iFrame (Oceans): Volume set to 0");
-}
+
 
 $(document).ready(function () {
     updateNavbar();
 
+    var currentPage = document.location.pathname.split('/').pop();
+    if (currentPage === "project-page.html") {
+        frame.onload = function () {
+            postMessage('{method:"setVolume",value:0}', '*');
+            console.log("iFrame (Oceans): Volume set to 0");
+        }
+    }
+
 });
+
 
 
 function updateNavbar() {
