@@ -1,217 +1,124 @@
-
-
-
 localStorage.setItem('user', JSON.stringify({}));
 
 
 console.clear();
 
-$(document).ready( function() {
+$(document).ready(function () {
 
     var archivePlaceholder = $('#archive-placeholder');
     var markup = $('#archive-template').html();
     var template = Handlebars.compile(markup);
 
     var data = {
-        title: '???',
-        archive: [
-            {
-                title: '',
-                link: '',
-                status: {
-                    complete: true,
-                    type: 'essay',
-                    description: '',
-                },
-                date: 'Thursday, May 8th',
-                specialNote: '',
-                poster: {
-                    small: 'https://unsplash.it/1600/900?random',
-                    medium: 'https://unsplash.it/1600/900?random',
-                    large: 'https://unsplash.it/1600/900?random'
-                },
-                headliners: [
-                    {
-                        name: 'Headliner 1',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 2',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 3',
-                        link: ''
-                    }
-                ],
-            },
-            {
-                title: '',
-                link: '',
-                status: {
-                    complete: true,
-                    type: 'essay',
-                    description: '',
-                },
-                date: 'Thursday, May 8th',
-                specialNote: '',
-                poster: {
-                    small: 'https://unsplash.it/1600/900?random',
-                    medium: 'https://unsplash.it/1600/900?random',
-                    large: 'https://unsplash.it/1600/900?random'
-                },
-                headliners: [
-                    {
-                        name: 'Headliner 1',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 2',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 3',
-                        link: ''
-                    }
-                ],
-            },
-            {
-                title: '',
-                link: '',
-                status: {
-                    complete: true,
-                    type: 'essay',
-                    description: '',
-                },
-                date: 'Thursday, May 8th',
-                specialNote: '',
-                poster: {
-                    small: 'https://unsplash.it/1600/900?random',
-                    medium: 'https://unsplash.it/1600/900?random',
-                    large: 'https://unsplash.it/1600/900?random'
-                },
-                headliners: [
-                    {
-                        name: 'Headliner 1',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 2',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 3',
-                        link: ''
-                    }
-                ],
-            },
-            {
-                title: '',
-                link: '',
-                status: {
-                    complete: true,
-                    type: 'essay',
-                    description: '',
-                },
-                date: 'Thursday, May 8th',
-                specialNote: '',
-                poster: {
-                    small: 'https://unsplash.it/1600/900?random',
-                    medium: 'https://unsplash.it/1600/900?random',
-                    large: 'https://unsplash.it/1600/900?random'
-                },
-                headliners: [
-                    {
-                        name: 'Headliner 1',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 2',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 3',
-                        link: ''
-                    }
-                ],
-            },
-            {
-                title: '',
-                link: '',
-                status: {
-                    complete: true,
-                    type: 'essay',
-                    description: '',
-                },
-                date: 'Thursday, May 8th',
-                specialNote: '',
-                poster: {
-                    small: 'https://unsplash.it/1600/900?random',
-                    medium: 'https://unsplash.it/1600/900?random',
-                    large: 'https://unsplash.it/1600/900?random'
-                },
-                headliners: [
-                    {
-                        name: 'Headliner 1',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 2',
-                        link: ''
-                    },
-                    {
-                        name: 'Headliner 3',
-                        link: ''
-                    }
-                ],
-            },
-        ]
+        title: '???', archive: [{
+            title: '', link: '', status: {
+                complete: true, type: 'essay', description: '',
+            }, creationdate: 'Thursday, May 8th', specialNote: '', poster: {
+                small: 'https://unsplash.it/1600/900?random', medium: 'https://unsplash.it/1600/900?random', large: 'https://unsplash.it/1600/900?random'
+            }, headline: [{
+                name: 'Header 1', link: ''
+            }, {
+                name: 'Header 2', link: ''
+            }, {
+                name: 'Header 3', link: ''
+            }],
+        }, {
+            title: '', link: '', status: {
+                complete: true, type: 'essay', description: '',
+            }, creationdate: 'Thursday, May 8th', specialNote: '', poster: {
+                small: 'https://unsplash.it/1600/900?random', medium: 'https://unsplash.it/1600/900?random', large: 'https://unsplash.it/1600/900?random'
+            }, headline: [{
+                name: 'Header 1', link: ''
+            }, {
+                name: 'Header 2', link: ''
+            }, {
+                name: 'Header 3', link: ''
+            }],
+        }, {
+            title: '', link: '', status: {
+                complete: true, type: 'essay', description: '',
+            }, creationdate: 'Thursday, May 8th', specialNote: '', poster: {
+                small: 'https://unsplash.it/1600/900?random', medium: 'https://unsplash.it/1600/900?random', large: 'https://unsplash.it/1600/900?random'
+            }, headline: [{
+                name: 'Header 1', link: ''
+            }, {
+                name: 'Header 2', link: ''
+            }, {
+                name: 'Header 3', link: ''
+            }],
+        }, {
+            title: '', link: '', status: {
+                complete: true, type: 'essay', description: '',
+            }, creationdate: 'Thursday, May 8th', specialNote: '', poster: {
+                small: 'https://unsplash.it/1600/900?random', medium: 'https://unsplash.it/1600/900?random', large: 'https://unsplash.it/1600/900?random'
+            }, headline: [{
+                name: 'Header 1', link: ''
+            }, {
+                name: 'Header 2', link: ''
+            }, {
+                name: 'Header 3', link: ''
+            }],
+        }, {
+            title: '', link: '', status: {
+                complete: true, type: 'essay', description: '',
+            }, creationdate: 'Thursday, May 8th', specialNote: '', poster: {
+                small: 'https://unsplash.it/1600/900?random', medium: 'https://unsplash.it/1600/900?random', large: 'https://unsplash.it/1600/900?random'
+            }, headline: [{
+                name: 'Header 1', link: ''
+            }, {
+                name: 'Header 2', link: ''
+            }, {
+                name: 'Header 3', link: ''
+            }],
+        },]
     };
-    archivePlaceholder.html( template(data) );
+    archivePlaceholder.html(template(data));
 
 
-
-    // $global
     var $window = $(window);
     var windowWidth;
     var windowHeight;
 
-    function getWindowDimentions() {
+    function getDimentions() {
         windowWidth = $window.width();
         windowHeight = $window.height();
     }
 
-    function setResponsibleImageSrc(imageAncestorElement, container) {
-        var lar = false; // innocent until proven guilty
-        var med = false; // "
+    function setResponsive(imgEle, imgContainer) {
         var context;
-        if ( !container ) {
+        if (!imgContainer) {
             context = windowWidth;
         } else {
-            context = $(container).outerWidth();
+            context = $(imgContainer).outerWidth();
         }
-        lar = context > 900;
-        med = context > 550;
 
-        $(imageAncestorElement).each( function() {
+        $(imgEle).each(function () {
             var $this = $(this).find('img');
             var src = {};
             src.small = $this.data('small');
             src.medium = $this.data('medium');
+            src.normal = $this.data('normal');
             src.large = $this.data('large');
-            if ( lar ) {
-                $this.attr('src', src.large);
-            } else if ( med ) {
-                $this.attr('src', src.medium);
-            } else {
+            if (context < 768) {
                 $this.attr('src', src.small);
             }
+            if (context >= 768 && context < 992) {
+                $this.attr('src', src.medium);
+            }
+            if (context >= 992 && context < 1200) {
+                $this.attr('src', src.normal);
+            }
+            if (context >= 1200) {
+                $this.attr('src', src.large);
+            }
         });
+
+
     };
 
-    $window.on('resize', function() { // this should jog a bit
-        getWindowDimentions();
-        setResponsibleImageSrc('.archive-list .poster', '.archive-list');
+    $window.on('resize', function () {
+        getDimentions();
+        setResponsive('.archive-list .poster', '.archive-list');
     }).trigger('resize');
 
 });

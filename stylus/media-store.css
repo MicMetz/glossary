@@ -12,7 +12,7 @@ html a {
 }
 html,
 body {
-  cursor: default;
+  cursor: normal;
 }
 code {
   cursor: text;

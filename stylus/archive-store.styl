@@ -1,36 +1,35 @@
 // $variables
+// $Breakpoints
+$break-point-normal = 'screen and (min-width: 1024px)'
+$break-point-table-normal = 'screen and (min-width: 768px)'
+$break-point-tablet-small = 'screen and (min-width: 576px)'
+$break-point-large = 'screen and (min-width: 1280px)'
+$break-point-xlarge = 'screen and (min-width: 1440px)'
 // ================
 
 // $colors
-$black = #111
-$white = #efefef
+$blk = #000
+$white = #fff
+$gray = #f5f5f5
 
-$gray = #999
-$gray-light = lighten($gray, 50%)
-$gray-lighter = lighten($gray-light, 30%)
-$gray-dark = darken($gray, 60%)
-
-$color = lightgreen
-$color-light = lighten($color, 30%)
-$color-dark = darken($color, 30%)
-
-$highlight = pink
-$highlight-light = lighten($highlight, 30%)
-$highlight-dark = darken($highlight, 30%)
-
-$alternate = wheat
-$alternate-light = lighten($alternate, 30%)
-$alternate-dark = darken($alternate, 14%)
+$primary-main = #01698F
+$primary-alt = #2EADDB
+$primary-medium = #DB872D
+$primary-valley = #FFAA4F
+$primary-peak = #8F5110
+$secondary-main = #1E8F87
+$secondary-alt = #69FFF5
+$secondary-medium = #44DBD0
+$secondary-valley = #8F3A10
+$secondary-peak = #DB7744
+// ================
 
 // $space
 $pad = 10px
 $thin = 1px
 $thick = 4px
 $corner = 6px
-
-// $break-points
-$break-point-1 = 'screen and (min-width: 700px)'
-$break-point-2 = 'screen and (min-width: 1000px)'
+// ================
 
 // $font
 body-font()
@@ -42,6 +41,7 @@ heading-font()
 // $font-style
 uppercase()
   text-transform: uppercase
+
 italic()
   font-style: italic
 
@@ -83,20 +83,20 @@ loud-voice()
 
 // $mixins
 responsive-image-wrapper()
-  //
-  img // probably just make this global setup
+  img
     display: block
     width: 100%
     height: auto
 
-basic-transition()
+normal-transition()
   transition: .6s
   &:hover
     transition: 0s
 
 // $box-model
-html // https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html
   box-sizing: border-box
+
   *, *:before, *:after
     box-sizing: inherit
 
@@ -108,12 +108,13 @@ figure
   margin: 0
   responsive-image-wrapper()
 
-// $cursor-reset // https://gist.github.com/murtaugh/5247154
 html,
 body
   cursor: default
+
 code
   cursor: text
+
 a,
 label,
 button,
@@ -128,10 +129,9 @@ input[disabled]
   cursor: default
 
 
-
 // $style
 body
-  background: rgba(0,0,0,.04)
+  background: rgba(0, 0, 0, .04)
   padding: $pad
   font-family: 'helvetica'
   body-font()
@@ -139,264 +139,53 @@ body
   background: $gray-dark
 
 a
-  display: block // is this reasonable can't tell yet?
-p //
-  a //
-    display: inline-block
+  display: block
 
-.events
+
+
+
+
+.archives
   max-width: 1300px
-  margin: 0 auto // center
+  margin: 0 auto
 
-.event-list
-  // border: 3px solid blue
-  // padding: $pad
 
-.event
-  display: flex
-  flex-direction: column
-  color: alpha($white, .8)
-  // LOTS of ways 'grid' would be helpful here too! (But it wasn't out yet)
-  @media $break-point-1
-    flex-direction: row
-    flex-wrap: wrap
-  &:not(:first-of-type)
-    margin-top: $pad*8
-  .promotional-media
-    // border: 2px solid lime
-    @media $break-point-1
-      flex-basis: 70%
-      order: 1
-    @media $break-point-2
-      flex-basis: 25%
-      order: 1
-  .details
-    // border: 2px solid red
-    @media $break-point-1
-      flex-basis: 100%
-      order: 3
-    @media $break-point-2
-      flex-basis: 50%
-      order: 2
-      padding-left: $pad*2
-  .call-to-action
-    // border: 2px solid purple
-    @media $break-point-1
-      width: 30%
-      order: 2
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      padding: $pad
-    @media $break-point-2
-      flex-basis: 25%
-      order: 3
-      justify-content: flex-start
 
-  .poster-link
-    display: block
-    overflow: hidden
-    border-bottom: $thick solid $black
-    figure
-      transition: .2s
-    &:hover
-      figure
-        transform: scale(1.1)
-  .emergency-notice
-    padding: $pad*.5 $pad
-    background: $highlight-dark
-    color: $highlight-light
-  .topline-info // this has to have a better name...
-    padding: $pad*.5
-    small-voice()
-    italic()
-    background: $gray-dark
-    color: $gray
-    border-bottom: $thick solid $black
-  .title
-    //
-    .copy
-      display: inline-block
-      padding: $pad
-      strong-voice()
-      background: $gray-lighter
-      color: $gray-dark
-  .acts // probably a better name...
-    //
-  .act-list
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-  .act
-    padding: 0
-    .link
-      padding: $pad*.5 0
-      display: inline-block
-      basic-transition()
-      &:hover
-        color: $color
-    &:not(:last-of-type)
-      span
-        &:after
-          display: inline-block
-          content: ', '
-          margin-right: $pad*.5
-  .headliner-list
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    padding-top: $pad
-  .headliner
-    //
-    &:not(:first-of-type)
-      // margin-top: $pad
-    &:nth-of-type(even)
-      // opacity: .6
-    &:not(:last-of-type)
-      margin-right: $pad*.5
-      margin-bottom: $pad*.5
-      span
-        &:after
-          content: ''
-    .link
-      // why are these links? They don't really lead to information about this act... ?
-      // should the entire list be one link instead?
-      strong-voice()
-      padding: $pad*.5 $pad
-      background: black
-      &:hover
-        background: $color
-        color: $black
-  // background-color: $color
-  // color: $color-dark
+.archive-list
 
-  .support-list
-    // background: $highlight-light
-  .support
-//
+
+
+
+
+
 .link
-// color: $highlight-dark
-.date
-  medium-voice()
-  margin-top: $pad
-  background: $gray
-  color: $white
-  padding: $pad*.5 $pad
-  display: inline-block
-.location
-  // this should be obvious based on the venue site... but there may be multiple
+  align-self: flex-start
 
-.times
-  // background: $gray-lighter
-  color: $gray
-  padding: $pad*.5 0
-.time-list
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  .time
-    //
-    &:not(:last-of-type)
-      margin-right: $pad
-  // &:not(:first-of-type)
-  // 	margin-left: $pad
-  .doors
-    span
-      &:before
-        content: 'Doors at '
-  .start
-    span
-      &:before
-        content: 'Starts at '
-  .end
-    span
-      &:before
-        content: 'Ends at '
-.age-restriction
-  //
-  .message
+
+.archive
+  &.active
+    border: 1px solid green
+  .status
     display: inline-block
-    background: $gray-lighter
-    color: $gray
-    padding: $pad*.5 $pad
-  .twentyone-and-up
-    background: $highlight-dark
-    color: $highlight-light
-  .eighteen-and-up
-    background: $black
-    color: $gray
-.custom
-  //
-
-.more-info
-  padding: $pad 0
-  .link
-    color: $gray
-    basic-transition()
-    &:hover
-      color: $color
-.ticketing
-  //
-  display: flex
-  flex-direction: column
-.link
-  align-self: flex-start
-.price-range
-  margin-top: $pad
-  @media $break-point-1
+    padding: $pad $pad* 2
+    min-width: 160px
     text-align: center
+    align-self: flex-start
+    @media $break-point-normal
+      align-self: center
+    strong-voice()
 
-.event
-&.sold-out
-// border: 1px solid red
-&.active
-// border: 1px solid green
 
-.status
-  display: inline-block
-  padding: $pad $pad*2
-  min-width: 160px
-  text-align: center
-  align-self: flex-start
-  @media $break-point-1
-    align-self: center
-  strong-voice()
-// if you need to be extra specific?
-// &.available
-// 	background: lightgreen
-// &.sold-out
-// 	background: red
-// &.in-flux
-// 	background: orange
-
-.event
-  //
+.archive
   .status
     background: $gray-light
     color: $gray
     min-width: 180px
-  // box-shadow: 0 $thick 0 0 $gray
-  &.available
-    .status
-      background: $color
-      color: $color-dark
-      box-shadow: 0 $thick 0 0 $color-dark
-      border-radius: $corner
-      basic-transition()
-      &:hover
-        background: darken($color, 5%)
-  &.not-available
-    .status
-      background: $gray
-      color: $gray-dark
-  // box-shadow: 0 $thick 0 0 $highlight-dark
-  &.in-flux
+  &.work-in-progress
     .status
       background: $alternate
-      color: $alternate-dark
-// box-shadow: 0 $thick 0 0 $alternate-dark
+      color: $secondary-alt
 
 
 footer
-  margin: $pad*6 0
+  margin: $pad* 6 0

@@ -1,6 +1,6 @@
+$break-point-normal = 'screen and (min-width: 1024px)'
+$break-point-table-normal = 'screen and (min-width: 768px)'
 $break-point-tablet-small = 'screen and (min-width: 576px)'
-$break-point-table-default = 'screen and (min-width: 768px)'
-$break-point-default = 'screen and (min-width: 1024px)'
 $break-point-large = 'screen and (min-width: 1280px)'
 $break-point-xlarge = 'screen and (min-width: 1440px)'
 
@@ -18,23 +18,32 @@ $secondary-alt = #6c757d
 
 html
   box-sizing: border-box;
-
   *, *:before, *:after
     box-sizing: inherit;
-
   a
     text-decoration: none;
     color: inherit;
+  body
+    font-size: 16px;
+    color: $black;
+    background-color: $white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 
 html,
 body
-  cursor: default
-
+  cursor: normal
 code
   cursor: text
 
+
 body-font()
-  //font-family: 'Roboto Mono', sans-serif;
   font-family: 'Roboto Mono', monospace;
 
 header-font()
@@ -46,28 +55,31 @@ italic-font()
 bold-font()
   font-weight: bold;
 
-uppercase-font()
+uppercase()
   text-transform: uppercase;
 
-neutral-voice()
+normal-voice()
   font-size: 1.2rem
   line-height: 1.5rem
+  letter-spacing: 0.05rem
   strong
     font-weight: 700
-
     em
       font-style: italic
+      font-weight: 400
 
 small-voice()
   font-size: 1rem
   line-height: 1.1rem
+  letter-spacing: 0.05rem
+    strong
+      font-weight: 700
+      em
+        font-style: italic
+        font-weight: 400
 
-shouting-voice()
-  font-size: 2rem
-  line-height: 2.5rem
-  font-weight: 650
 
-default-transition()
+normal-transition()
   transition: all 0.4s ease-in-out
   &:hover
     transition: 0s
