@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="254b5fc6-2d4d-4b4e-b3bc-e7fa1e5e0112" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/archive-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/archive-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylus/archive-store.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylus/archive-store.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylus/archive-store.styl" beforeDir="false" afterPath="$PROJECT_DIR$/stylus/archive-store.styl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +111,7 @@
       <recent name="C:\Users\blahh\Documents\SchoolWork\Web\MicMetz.github.io\project\src\data\Experience" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.project-page.html">
+  <component name="RunManager" selected="JavaScript Debug.archive-page.html">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../../Program Files/AdoptOpenJDK/jdk-11.0.9.101-hotspot" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -125,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.project-page.html" />
         <item itemvalue="JavaScript Debug.archive-page.html" />
+        <item itemvalue="JavaScript Debug.project-page.html" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665509292971</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="mute iframes">
+      <created>1665509369195</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665509369195</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
