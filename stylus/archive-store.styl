@@ -11,6 +11,7 @@ $break-point-xlarge = 'screen and (min-width: 1440px)'
 $blk = #000
 $white = #fff
 $gray = #f5f5f5
+$gray-dark = #eaeaea
 
 $primary-main = #01698F
 $primary-alt = #2EADDB
@@ -136,7 +137,7 @@ body
   font-family: 'helvetica'
   body-font()
   normal-voice()
-  background: $gray-dark
+  background: $gray
 
 a
   display: block
@@ -169,14 +170,14 @@ a
 
 .archive
   padding: $pad
-    margin: $pad 0
-    border: 1px solid $blk
-    border-radius: $corner
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    align-items: center
-    align-content: center
+  margin: $pad 0
+  border: 1px solid $blk
+  border-radius: $corner
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  align-content: center
 
   .status
     background: $gray-light
@@ -196,7 +197,7 @@ footer
 .archive-item__description
   margin: $pad* 2 0
   small-voice()
-  color: $gray-dark
+  color: $blk
   line-height: 1.0
 
 
@@ -226,3 +227,5 @@ footer
     @media $break-point-normal
       display: inline-block
       margin: 0 $pad* 0 0
+
+
