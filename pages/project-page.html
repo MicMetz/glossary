@@ -14,8 +14,8 @@
 		<title>My Recent Work</title>
 	
 	</head>
-
-	<body >
+	
+	<body>
 		<nav class="navbar navbar-expand-lg bg-dark fixed-top" id="navigation">
 			<div class="container-fluid">
 				<a class="navbar-brand text-light home-route" href="../index.html" style="color: white!important;">App</a>
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 		</nav>
-		<div  class="container-fluid pt-5" id="custom-cards">
+		<div class="container-fluid pt-5" id="custom-cards">
 			<div class="container px-2 py-3">
 				<h1 class="pb-2 border-bottom">Recent Projects</h1>
 				
@@ -63,6 +63,12 @@
 											<use xlink:href="#geo-fill"></use>
 										</svg>
 										<a href="https://algovisualizers.netlify.app/sorting-visualizer"><small>Demo</small></a>
+									</li>
+									<li class="d-flex align-items-center me-3">
+										<svg class="bi me-2" width="1em" height="1em">
+											<use xlink:href="#geo-fill"></use>
+										</svg>
+										<a href="../public/documents/AlgoVisual.html"><small>More Info</small></a>
 									</li>
 									
 									<li class="d-flex align-items-center">
@@ -156,8 +162,14 @@
 							<video controls loop class="card-img-top h-75 overflow-hidden">
 								<source src="../images/RemoteCamera.mp4" class="image-overlay" type="video/mp4"> <!-- image-overlay -->
 							</video>
-							<div class="d-flex flex-column h-25 p-3 pb-1 text-black text-shadow-1">
+							<div class="d-flex flex-column p-3 pb-1 text-black text-shadow-1">
 								<h2 class="pt-1 mt-2 mb-4 display-6 lh-1 fw-bold">RaspPi Remote Security Camera</h2>
+								<p class="card-text mb-auto">A Raspberry Pi based security camera that can be controlled remotely via a web app.</p>
+								<br>
+								<p class="card-text mb-auto">The camera is controlled via a web app that is hosted on the Raspberry Pi. The web app is built with Flask and uses the picamera library to control the camera. The web app is also used to view the live stream from the camera.</p>
+								<br>
+								<p class="card-text mb-auto">OpenCV is used to detect motion in the live stream and send an email notification, and a text notification, when motion is detected. The notification includes a snapshot of the object that caused the trigger.</p>
+								<br>
 								<ul class="d-flex list-unstyled mb-0  mt-auto">
 									<li class="me-auto">
 										<img src="https://github.com/twbs.png" alt="" width="32" height="32" class="rounded-circle border border-white">
@@ -263,7 +275,7 @@
 					
 					<div class="col">
 						<div class="card project-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
-							<iframe id="o-frame"  src="https://webdevgroupcu.org/mime9599/digital-animations/SlowClap/" class="card-img-top h-50 image-overlay overflow-hidden" scrolling="no"></iframe> <!-- image-overlay -->
+							<iframe id="o-frame" src="https://webdevgroupcu.org/mime9599/digital-animations/SlowClap/" class="card-img-top h-50 image-overlay overflow-hidden" scrolling="no"></iframe> <!-- image-overlay -->
 							
 							<div class="d-flex flex-column h-50 p-3 pb-0 mb-1 text-black text-shadow-1">
 								<h2 class="pt-0 mt-0 mb-1 display-6 lh-1 fw-bold">Oceans(VR Animations)</h2>
@@ -311,8 +323,8 @@
 								<h3>Unity</h3>
 								<br>
 								<p class="card-text mb-auto">A 3D game where you play as a fire elemental and an ice elemental. You must work together to solve puzzles and defeat the boss.</p>
-								<p class="card-text mb-auto">This game started as a course assignment then was continued for a Denver Game Jam.</p>
-								
+								<p class="card-text mb-auto">This game started as a course assignment then was continued for a Denver Game Jam. (That I ended up not attenting)</p>
+								<p class="card-text mb-auto">I was the lead programmer and designer for this project. <span>The assets were either created by me or were free assets from the Unity Asset Store.</span></p>
 								<ul class="d-flex list-unstyled mb-0  mt-auto">
 									<li class="me-auto">
 										<img src="https://github.com/twbs.png" alt="" width="32" height="32" class="rounded-circle border border-white">
@@ -340,8 +352,8 @@
 						</div>
 					</div>
 				</div>
-				
-				
+			
+			
 			</div>
 		
 		
@@ -359,6 +371,6 @@
 			</p>
 		</footer>
 		<script type="application/javascript" src="../manager.js"></script>
-
+	
 	</body>
 </html>
