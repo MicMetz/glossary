@@ -106,6 +106,19 @@ a {
 footer {
   margin: 60px 0;
 }
+feature {
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.archive-item {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 .archive-item__description {
   margin: 20px 0;
   font-size: 14px;
