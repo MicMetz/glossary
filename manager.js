@@ -7,12 +7,16 @@ $(document).ready(function () {
     updateNavbar();
 
     var currentPage = document.location.pathname.split('/').pop();
-    if (currentPage === "project-page.html") {
-        frame.onload = function () {
-            postMessage('{method:"setVolume",value:0}', '*');
-            console.log("iFrame (Oceans): Volume set to 0");
-        }
-    }
+    frame.onload = function () {
+        postMessage('{method:"setVolume",value:0}', '*');
+        console.log("iFrame (Oceans): Volume set to 0");
+    };
+    // if (currentPage === "project-page.html") {
+    //     frame.onload = function () {
+    //         postMessage('{method:"setVolume",value:0}', '*');
+    //         console.log("iFrame (Oceans): Volume set to 0");
+    //     }
+    // }
 
 });
 
